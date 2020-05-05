@@ -7,29 +7,33 @@ using namespace std;
 
 int main()
 {
-	Vector2D v0;
-	Vector2D v1(2, 4);
-	Vector2D v2(0, 1, 4, 5);
-	cout << "v0: ";
-	v0.print();
-	cout << "v1: ";
+	Vector2D v1(2,3);
+	Vector2D v2(4,5);
+	Vector2D v3;
 	v1.print();
-	cout << "v2: ";
+	cout << "**\n";
 	v2.print();
-	cout << "v0=v1+v2: ";
-	v0 = v1;
-	v0.sum(v2);
-	v0.print();
-	cout << "v0=(0,0)\n";
-	v0.setx(0);
-	v0.sety(0);
-	cout << "v0.angle(v1): " << v0.angle(v1) << endl;
-	cout << "v1.angle(v2): " << v1.angle(v2) << endl;
-	cout << "v1.scalarMult(v2): " << v1.scalarMult(v2) << endl;
-	cout << "v1*=3: ";
-	v1.mult(3);
+	cout << "=\n" << v1.scalarMult(v2) << endl;
+	cout << "===============================\n";
 	v1.print();
-	cout << "v2.angle(v1)" << v2.angle(v1) << endl;
+	cout << "+\n";
+	v2.print();
+	cout << "=\n";
+	v3 = v1.sum(v2);
+	v3.print();
+	cout << "===============================\n";
+	v1.print();
+	cout << "-\n";
+	v2.print();
+	cout << "=\n";
+	v3 = v1.sub(v2);
+	v3.print();
+	cout << "===============================\n";
+	v1.print();
+	cout << "*\n5\n";
+	cout << "=\n";
+	v3 = v1.mult(5);
+	v3.print();
 
 }
 

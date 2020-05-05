@@ -34,17 +34,23 @@ void Vector2D::sety(double y) {
 double Vector2D::gety() {
 	return this->y;
 }
-void Vector2D::sum(Vector2D other) {
-	this->x += other.x;
-	this->y += other.y;
+Vector2D Vector2D::sum(Vector2D other) {
+	Vector2D temp(this->x,this->y);
+	temp.x += other.x;
+	temp.y += other.y;
+	return temp;
 }
-void Vector2D::sub(Vector2D other) {
-	this->x -= other.x;
-	this->y -= other.y;
+Vector2D Vector2D::sub(Vector2D other) {
+	Vector2D temp(this->x, this->y);
+	temp.x -= other.x;
+	temp.y -= other.y;
+	return temp;
 }
-void Vector2D::mult(double other) {
-	this->x *= other;
-	this->y *= other;
+Vector2D Vector2D::mult(double other) {
+	Vector2D temp(this->x, this->y);
+	temp.x *= other;
+	temp.y *= other;
+	return temp;
 }
 double Vector2D::lenght() {
 	//formula dlina vectora

@@ -13,9 +13,9 @@ public:
 	double getx();
 	void sety(double value);
 	double gety();
-	void sum(Vector2D);
-	void sub(Vector2D);
-	void mult(double);
+	Vector2D sum(Vector2D);
+	Vector2D sub(Vector2D);
+	Vector2D mult(double);
 	double lenght();
 	double angle(Vector2D);
 	double scalarMult(Vector2D);
