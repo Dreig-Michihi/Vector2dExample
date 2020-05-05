@@ -3,38 +3,30 @@
 
 #include <iostream>
 #include "Vector2D.h"
+#include <string>
 using namespace std;
 
 int main()
 {
-	Vector2D v1(2,3);
-	Vector2D v2(4,5);
-	Vector2D v3;
-	v1.print();
-	cout << "**\n";
-	v2.print();
-	cout << "=\n" << v1.scalarMult(v2) << endl;
-	cout << "===============================\n";
-	v1.print();
-	cout << "+\n";
-	v2.print();
-	cout << "=\n";
-	v3 = v1.sum(v2);
-	v3.print();
-	cout << "===============================\n";
-	v1.print();
-	cout << "-\n";
-	v2.print();
-	cout << "=\n";
-	v3 = v1.sub(v2);
-	v3.print();
-	cout << "===============================\n";
-	v1.print();
-	cout << "*\n5\n";
-	cout << "=\n";
-	v3 = v1.mult(5);
-	v3.print();
-
+	setlocale(LC_ALL, "ru");
+	Vector2D v1(1, 4);
+	Vector2D v2(5, 3);
+	Vector2D v3(2, 4);
+	cout << "Сумма.\n"<<string(v1)<<endl;
+	cout << "+\n"<<string(v2)<<endl;
+	cout << "=\n"<<string(v1+v2)<<endl;
+	cout << "Разность.\n"<<string(v2)<<endl;
+	cout << "-\n"<<string(v3)<<endl;
+	cout << "=\n"<<string(v1-v3)<<endl;
+	cout << "Скалярное умножение.\n"<<string(v2)<<endl;
+	cout << "*\n"<<string(v3)<<endl;
+	cout << "=\n"<<v2*v3<<endl;
+	cout << "Умножение вектора на число.\n"<<string(v2)<<endl;
+	cout << "*\n6\n";
+	cout << "=\n" << string(v2 * 6)<<endl;
+	cout << "Умножение числа на вектор.\n";
+	cout << "6\n*\n"<<string(v2)<<endl;
+	cout << "=\n" << string(6 * v2)<<endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
